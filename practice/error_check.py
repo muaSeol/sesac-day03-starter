@@ -90,7 +90,7 @@ def _example_rows(key, names):
             rows.append(_row("줄 번호", answer[:40], AGAIN, "숫자로 적습니다. Cell In[ ] 뒤의 line 다음 숫자입니다."))
         else:
             rows.append(_row("줄 번호", answer[:40], AGAIN,
-                             "In[ ] 안의 숫자는 셀을 실행한 순서입니다. 그 뒤 line 다음 숫자(셀 안에서 몇째 줄인지)를 적습니다."))
+                             "line 다음 숫자를 적습니다. 맨 윗줄(# 실행 줄)이 1번입니다. In[ ] 안의 숫자는 셀을 실행한 순서라 줄 번호가 아닙니다."))
 
     answer = _value(names, key + "_meaning")
     if answer is None:
@@ -161,10 +161,10 @@ def _row(item, value, status, todo=""):
 
 def _closing(rows):
     statuses = [row["status"] for row in rows]
-    if NOT_YET in statuses:
-        return "아직 실행하지 않은 적기 셀이 있습니다. 그 셀을 먼저 실행한 뒤 이 셀을 다시 실행합니다."
     if AGAIN in statuses:
         return "다시가 나온 줄은 할 일을 따라 적기 칸을 고치고, 그 적기 셀부터 다시 실행합니다."
+    if NOT_YET in statuses:
+        return "아직 실행하지 않은 적기 셀이 있습니다. 그 셀을 먼저 실행한 뒤 이 셀을 다시 실행합니다."
     return "모두 통과입니다."
 
 
