@@ -20,7 +20,7 @@
 | `pyproject.toml`, `uv.lock`, `.python-version` | `uv sync` 가 읽는 설정입니다. 파이썬 3.12 와 streamlit, ipykernel 이 적혀 있습니다 |
 | `.gitignore` | git 에 올리지 않을 파일의 목록입니다 |
 
-처음 받았으면 이 폴더의 터미널(Windows PowerShell, Mac 터미널)에서 한 번 입력합니다. 받는 순서는 가이드 문서 "스타터 저장소 받기"에 있습니다.
+이 저장소는 강사의 템플릿 저장소(https://github.com/muaSeol/sesac-day03-starter)에서 **Use this template** 로 만든 내 저장소(`sesac-day03`)입니다. 만들고 내 컴퓨터로 받는 순서는 가이드 문서 "스타터 저장소 받기"에 있습니다. 받은 뒤 이 폴더의 터미널(Windows PowerShell, Mac 터미널)에서 한 번 입력합니다.
 
 ```bash
 uv sync
@@ -37,7 +37,7 @@ git add .
 git commit -m "1단계 한 줄 요청으로 만든 자기소개 페이지"
 ```
 
-- [ ] 1단계 한 줄 요청(덱 2절): Codex에 한 줄로 요청해 페이지를 만들고, 바뀐 내용을 Codex 답 아래의 바뀐 파일 묶음(VS Code 소스 제어나 터미널의 `git diff` 로도 볼 수 있습니다)에서 봅니다. `uv run streamlit run 파일이름.py` 로 실행해 자기소개 페이지 체크리스트로 채점하고, 아래 점수 표에 적은 뒤 commit 합니다
+- [ ] 1단계 한 줄 요청(덱 2절): Codex에 한 줄로 요청해 페이지를 만들고, 무엇이 생겼는지 Codex 답 아래의 바뀐 파일 묶음에서 봅니다. 새로 만든 파일은 VS Code 소스 제어(Source Control)에 `U` 표시로 보입니다. `uv run streamlit run 파일이름.py` 로 실행해(처음 실행할 때는 아래 "Streamlit 앱을 처음 실행할 때"를 봅니다) 자기소개 페이지 체크리스트로 채점하고, 아래 점수 표에 적은 뒤 commit 합니다
 - [ ] 오류 읽기 연습(덱 2절): `practice/day03_01_error_reading.ipynb` 의 A~C 묶음을 하고(일부러 오류를 내는 셀이 있어 셀을 하나씩 실행합니다. 모두 실행은 첫 오류 셀에서 멈춥니다), 이어서 `uv run streamlit run practice/broken_app.py` 로 고장 난 앱을 실행해 오류를 읽고 Codex에 다시 요청합니다
 - [ ] 2단계 요구사항과 검증(덱 3절): 3줄 요구사항을 쓰고 `requirements.md` 에 요구사항 체크리스트를 만듭니다. Codex로 다시 구현하고 `/review` 를 봅니다. Codex의 자가 채점과 내가 직접 확인한 결과를 비교하고, 자기소개 페이지 체크리스트로 다시 채점해 점수 표에 적은 뒤 commit 합니다
 - [ ] 3단계 MCP(덱 4절): 가이드 문서 "Codex에 MCP 연결하기"의 순서대로 저장소 밖에 내 정보 파일(`~/sesac-my-info/my_info.md`)을 만들어 채웁니다. 저장소 밖에 두면 GitHub에 올라가지 않습니다. filesystem MCP를 연결해 그 파일을 읽게 하고 페이지에 반영한 뒤, 강사 시연에서 찾은 사례를 참고해 보완하고 commit 합니다
@@ -49,13 +49,31 @@ git commit -m "1단계 한 줄 요청으로 만든 자기소개 페이지"
 |---|---|---|
 | 통과한 항목 수(10개 가운데) |  |  |
 
+## Streamlit 앱을 처음 실행할 때
+
+처음 한 번은 터미널에 아래 안내가 나오고 `Email:` 에서 멈춥니다. 아무것도 적지 않고 Enter 를 누릅니다. 그러면 서버가 켜지고 브라우저에 페이지가 열립니다. 두 번째 실행부터는 묻지 않습니다.
+
+```text
+      👋 Welcome to Streamlit!
+
+      If you'd like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,
+      leave this field blank.
+
+      Email:
+```
+
+- Enter 뒤에 나오는 사용 통계 안내와, 주소 아래의 `Help agents write better Streamlit apps?` 두 줄, 브라우저 오른쪽 위의 알림(Install, Don't show again)은 이 수업에서 쓰지 않으므로 무시합니다
+- 브라우저가 열리지 않으면 터미널의 `Local URL:` 주소(`http://localhost:8501`)를 브라우저 주소 창에 붙여 넣습니다
+- Windows 에서 처음 실행할 때 방화벽 허용 창이 뜨면 취소해도 됩니다. 내 컴퓨터의 브라우저(`localhost`)에서는 그대로 열립니다
+
 ## 오후: 할 일 앱 과제(현장조교 시간 15:00~18:00)
 
 할 일 앱은 이 폴더 안에 `todo` 폴더를 만들어 그 안에 만듭니다. 오전에 만든 자기소개 페이지와 섞이지 않게 하려는 것입니다.
 
 - [ ] 0 따라잡기: 오전에 못 끝낸 것을 마치고, 노트북의 "더 해 보기" 묶음을 합니다
-- [ ] 1 할 일 앱 요구사항과 최종 화면 시안을 확인하고, 요구사항을 `todo/requirements.md` 에 예나 아니오로 답할 수 있는 체크리스트로 옮깁니다
-- [ ] 2 요구사항과 화면 시안대로 Codex에 요청해 앱을 만듭니다
+- [ ] 1 강의 사이트의 3일차 실습 자료에서 할 일 앱 과제 자료 세 개(요구사항 한 장 `requirements-todo.md`, 최종 화면 시안 `d03-c9.png`, 확인용 입력 3개 `check-inputs.md`)를 받아 `todo` 폴더에 넣습니다. 요구사항과 시안을 확인하고, 요구사항을 `todo/requirements.md` 에 예나 아니요로 답할 수 있는 체크리스트로 옮깁니다
+- [ ] 2 요구사항과 화면 시안대로 Codex에 요청해 앱을 만듭니다. 요청할 때 시안 그림(`todo/d03-c9.png`)을 Codex 입력 칸의 사진 추가로 붙이거나, 요청 글에 `todo/d03-c9.png 와 같은 화면으로` 처럼 파일 이름을 적습니다
 - [ ] 3 확인용 입력 3개로 결과를 확인하고, 요구사항 체크리스트를 자가 채점합니다. 앱을 껐다 켜서 할 일이 남아 있는지 봅니다
 - [ ] 4 commit 하고 `git push` 로 GitHub 내 저장소에 올립니다. 할 일이 저장되는 `todo/todos.db` 는 내 할 일이 든 파일이라 올라가지 않게 `.gitignore` 에 넣어 두었습니다
 - [ ] 5 이 README의 "2. 제출할 내용"을 쓰고 "3. 제출 전 확인"에 표시한 뒤 한 번 더 commit, push 합니다
@@ -87,7 +105,7 @@ git commit -m "1단계 한 줄 요청으로 만든 자기소개 페이지"
 
 ## 확인용 입력 결과
 
-| 확인용 입력 | 기대 결과와 같았나요(같음, 다름) | 다르면 무엇이 달랐나요 |
+| 확인용 입력 | 기대 결과와 비교(같음, 다름) | 다른 점 |
 |---|---|---|
 | 1 보통 문장 |  |  |
 | 2 빈 입력 |  |  |
