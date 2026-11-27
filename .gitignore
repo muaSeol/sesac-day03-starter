@@ -1,0 +1,15 @@
+# 이 폴더 전용 파이썬 환경(uv sync 가 만듦)
+.venv/
+
+# 파이썬과 주피터가 저절로 만드는 파일
+__pycache__/
+.ipynb_checkpoints/
+
+# 비밀 값을 적는 파일(API 키 등)
+.env
+
+# Mac 이 저절로 만드는 파일
+.DS_Store
+
+# SQLite 데이터 파일(앱이 처음 실행될 때 생김)
+*.db
