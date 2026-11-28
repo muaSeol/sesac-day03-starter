@@ -8,3 +8,4 @@ AGENTS.md
 .agents/
 .venv/
 .vscode/
+.playwright-mcp/

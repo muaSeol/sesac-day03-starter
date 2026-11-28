@@ -13,3 +13,6 @@ __pycache__/
 
 # SQLite 데이터 파일(앱이 처음 실행될 때 생김)
 *.db
+
+# Playwright MCP 가 저장소 맨 위에 만드는 폴더
+.playwright-mcp/

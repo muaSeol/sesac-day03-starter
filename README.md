@@ -6,10 +6,10 @@
 
 | 시간 | 파일 또는 폴더 | 하는 일 |
 |---|---|---|
-| 함께 따라 하기 실습 | `index.html`, `requirements.md`, `AGENTS.md` | 문서 "3일차 함께 따라 하기 실습"을 따라 Codex 로 만듭니다 |
+| 함께 따라 하기 실습 | `index.html`, `requirements.md`, `AGENTS.md` (만들 파일) | 문서 "3일차 함께 따라 하기 실습"을 따라 Codex 로 만듭니다 |
 | 함께 따라 하기 실습 | `.vercelignore` | 페이지를 배포할 때 뺄 파일 목록입니다. 새 폴더를 만들면 이 목록에 추가합니다 |
 | 과제형 실습 | `todo/requirements.md`, `todo/check-inputs.md`, `todo/design.webp` | 할 일 앱의 요구사항, 확인용 입력, 화면 시안입니다 |
-| 과제형 실습 | `todo/app.py` | 문서 "3일차 과제형 실습"을 따라 Codex 로 만드는 할 일 앱입니다 |
+| 과제형 실습 | `todo/app.py` (만들 파일) | 문서 "3일차 과제형 실습"을 따라 Codex 로 만드는 할 일 앱입니다 |
 
 함께 따라 하기 실습은 주강사와, 과제형 실습은 현장조교와 합니다.
 
