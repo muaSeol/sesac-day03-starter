@@ -129,7 +129,7 @@ def _check_request(names):
                              "오류 이름이 있는 맨 아래 줄까지 들어가게 붙여 넣습니다."))
         elif len(lines) < 2:
             rows.append(_row("오류 메시지 전체", "한 줄만 있음", AGAIN,
-                             "맨 아래 줄만이 아니라 줄 번호가 나온 부분부터 맨 아래 줄까지 모두 붙여 넣습니다."))
+                             "줄 번호가 나온 부분부터 맨 아래 줄까지 모두 붙여 넣습니다."))
         else:
             rows.append(_row("오류 메시지 전체", "%d줄" % len(lines), PASS))
 
@@ -143,7 +143,7 @@ def _check_request(names):
     _show(rows)
     if all(row["status"] == PASS for row in rows):
         print("")
-        print("Codex 에 보낼 요청(세 칸을 한 덩어리로 모은 것):")
+        print("Codex 에 보낼 요청:")
         print("----")
         print("하려던 일: " + goal)
         print("오류 메시지 전체:")
@@ -162,7 +162,7 @@ def _row(item, value, status, todo=""):
 def _closing(rows):
     statuses = [row["status"] for row in rows]
     if AGAIN in statuses:
-        return "다시가 나온 줄은 할 일을 따라 적기 칸을 고치고, 그 적기 셀부터 다시 실행합니다."
+        return "다시가 나온 줄의 할 일을 따라 적기 칸을 고칩니다. 그 적기 셀부터 다시 실행합니다."
     if NOT_YET in statuses:
         return "아직 실행하지 않은 적기 셀이 있습니다. 그 셀을 먼저 실행한 뒤 이 셀을 다시 실행합니다."
     return "모두 통과입니다."

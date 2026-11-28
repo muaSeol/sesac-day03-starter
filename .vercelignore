@@ -1,0 +1,14 @@
+practice/
+hw/
+todo/
+*.ipynb
+*.py
+pyproject.toml
+uv.lock
+.python-version
+requirements.md
+README.md
+AGENTS.md
+.agents/
+.venv/
+.vscode/
