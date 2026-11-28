@@ -10,3 +10,4 @@ AGENTS.md
 .venv/
 .vscode/
 .playwright-mcp/
+.streamlit/
